@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "lmao2",
+    "description": "lmao2",
+    "version": "1.0",
+    "permissions": [
+        "scripting",
+        "activeTab",
+        "tabs",
+        "storage",
+        "background"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "https://www.facebook.com/*",
+        "https://www.youtube.com/*"
+    ]
+}
