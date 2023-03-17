@@ -21,7 +21,7 @@ let firstLoaded = true;
 let initialTime = 0;
 let timeElapsed;
 let sendData = false;
-let sendUpdatePopupColor = true;
+let sendUpdateColor = true;
 
 setInterval(async () => {
     chrome.runtime.sendMessage({
@@ -48,14 +48,14 @@ setInterval(async () => {
 
     timeElapsed = Math.floor(initialTime + (Date.now() - firstLoadTime) / 60000);
 
-    if (timeElapsed >= viewLimit && sendUpdatePopupColor) {
-        chrome.storage.local.set({ popupColor: "red" }).then(() => {
+    if (timeElapsed >= viewLimit && sendUpdateColor) {
+        chrome.storage.local.set({ popupColor: "#FF5E00", fontColor: "white" }).then(() => {
             chrome.runtime.sendMessage({
                 updatePopup: true,
                 updateColor: true
             });
 
-            sendUpdatePopupColor = false;
+            sendUpdateColor = false;
         });
 
         alert(`Bạn đã sử dụng ${currentSite} quá 2 tiếng một ngày!`);

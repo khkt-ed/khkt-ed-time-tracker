@@ -114,6 +114,7 @@ setInterval(() => {
 
             if (a && b) {
                 await chrome.storage.local.set({ popupColor: "white" });
+                await chrome.storage.local.set({ fontColor: "#FF5E00" });
             }
 
             await chrome.storage.local.set({ lastLoadedTime: now });
