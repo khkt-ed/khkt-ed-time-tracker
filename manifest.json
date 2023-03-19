@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "lmao2",
-    "description": "lmao2",
+    "name": "Time tracker",
+    "description": "Giúp người dùng tính toán thời gian sử dụng mạng xã hội trong ngày và đưa ra khuyến nghị nếu vượt quá mức quy định.",
     "version": "1.0",
     "permissions": [
         "scripting",
